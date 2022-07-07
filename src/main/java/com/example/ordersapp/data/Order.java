@@ -19,29 +19,25 @@ public class Order {
   private String orderName;
   private Float orderPrice;
   private Integer orderAmount;
-  private LocalDate orderDate;
 
   public Order() {
 
   }
 
   public Order(Long id, String orderCategory, String orderName, Float orderPrice,
-      Integer orderAmount, LocalDate orderDate) {
+      Integer orderAmount) {
     this.id = id;
     this.orderCategory = orderCategory;
     this.orderName = orderName;
     this.orderPrice = orderPrice;
     this.orderAmount = orderAmount;
-    this.orderDate = orderDate;
   }
 
-  public Order(String orderCategory, String orderName, Float orderPrice, Integer orderAmount,
-      LocalDate orderDate) {
+  public Order(String orderCategory, String orderName, Float orderPrice, Integer orderAmount) {
     this.orderCategory = orderCategory;
     this.orderName = orderName;
     this.orderPrice = orderPrice;
     this.orderAmount = orderAmount;
-    this.orderDate = orderDate;
   }
 
   public Long getId() {
@@ -84,14 +80,6 @@ public class Order {
     this.orderAmount = orderAmount;
   }
 
-  public LocalDate getOrderDate() {
-    return orderDate;
-  }
-
-  public void setOrderDate(LocalDate orderDate) {
-    this.orderDate = orderDate;
-  }
-
   @Override
   public String toString() {
     return "Order{" +
@@ -100,7 +88,6 @@ public class Order {
         ", orderName='" + orderName + '\'' +
         ", orderPrice=" + orderPrice +
         ", orderAmount=" + orderAmount +
-        ", orderDate=" + orderDate +
         '}';
   }
 }
