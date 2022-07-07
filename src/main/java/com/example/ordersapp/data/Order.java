@@ -25,7 +25,7 @@ public class Order {
   private Long id;
   private String orderCategory;
   private String orderName;
-  private Double orderPrice;
+  private Float orderPrice;
   private Integer orderAmount;
   private LocalDate orderDate;
 
@@ -33,7 +33,7 @@ public class Order {
 
   }
 
-  public Order(Long id, String orderCategory, String orderName, Double orderPrice,
+  public Order(Long id, String orderCategory, String orderName, Float orderPrice,
       Integer orderAmount, LocalDate orderDate) {
     this.id = id;
     this.orderCategory = orderCategory;
@@ -43,7 +43,7 @@ public class Order {
     this.orderDate = orderDate;
   }
 
-  public Order(String orderCategory, String orderName, Double orderPrice, Integer orderAmount,
+  public Order(String orderCategory, String orderName, Float orderPrice, Integer orderAmount,
       LocalDate orderDate) {
     this.orderCategory = orderCategory;
     this.orderName = orderName;
@@ -76,11 +76,11 @@ public class Order {
     this.orderName = orderName;
   }
 
-  public Double getOrderPrice() {
+  public Float getOrderPrice() {
     return orderPrice;
   }
 
-  public void setOrderPrice(Double orderPrice) {
+  public void setOrderPrice(Float orderPrice) {
     this.orderPrice = orderPrice;
   }
 
